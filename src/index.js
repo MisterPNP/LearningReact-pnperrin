@@ -1,14 +1,11 @@
-import React from 'react'; //import React library
-import ReactDOM from 'react-dom';
+//learn functional components in React
+import React from "react"
+import ReactDOM from "react-dom"
 
-//print hello world in root id in index.html
-//uses JSX (JS rendition of html)
-ReactDOM.render(
-    <div>
-        <h1>Hello world!</h1>
-        <p>This is a paragraph!</p>
-    </div>,
-    document.getElementById("root")
-);
+//.js is default extension so we don't have to include it
+//./ for current directory
+import MyApp from "./components/MyApp"
 
+//render the html in MyApp() at id root in index.html
+ReactDOM.render(<MyApp/>, document.getElementById("root"))
 
