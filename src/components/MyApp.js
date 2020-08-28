@@ -8,11 +8,13 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import MainContent from "./MainContent";
+import ProfilePicture from "./ProfilePicture";
 
 function MyApp() {
     return(
         <div>
             <Header/>
+            <ProfilePicture/>
             <MainContent/>
             <Footer/>
         </div>

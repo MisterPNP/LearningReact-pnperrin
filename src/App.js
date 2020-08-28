@@ -1,5 +1,5 @@
 
-import React from "react"
+//import React from "react"
 import ReactDOM from "react-dom"
 
 //params: what I want to render, where do i want to render it
