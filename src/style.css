@@ -15,3 +15,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.joke {
+    color: cadetblue;
+    text-align: center;
+}
+.joke > p {
+    font-size: 30px;
+}
+
+.contactCard {
+    text-align: center;
+}
+
+.profilePicture {
+    text-align: center;
+}
+
+.clock {
+    
+}

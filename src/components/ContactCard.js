@@ -12,7 +12,7 @@ import React from "react"
 //they become properties passed in for customization
 function ContactCard(props) {
     return (
-        <div>
+        <div className="contactCard">
             <img src={props.contact.imgURL} alt="cat"/>
             <h3>{props.contact.name}</h3>
             <p> Phone: {props.contact.phone}</p>

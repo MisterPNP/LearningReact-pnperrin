@@ -10,6 +10,7 @@ import Header from "./Header";
 import MainContent from "./MainContent";
 import ProfilePicture from "./ProfilePicture";
 import ContactCard from "./ContactCard";
+import Joke from "./Joke";
 
 function MyApp() {
     return(
@@ -48,6 +49,14 @@ function MyApp() {
                     phone:"(212) 555-4567",
                     email:"thecat@hotmail.com"
                 }}
+            />
+            <Joke
+                number="1"
+                line="knock knock... Who's there? nope"
+            />
+            <Joke
+                number="2"
+                line="no joke here... i'm too funny"
             />
             <Footer/>
         </div>
