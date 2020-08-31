@@ -10,11 +10,13 @@ function Header() {
     const hours = date.getHours()
     let timeOfDay
 
+    //styling header
     const styles = {
         color: "#FF8C00",
         fontSize: 50
     }
 
+    //styling time paragraph
     const stylesTime = {
         fontSize: 30
     }
