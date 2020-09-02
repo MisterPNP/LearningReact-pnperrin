@@ -51,6 +51,7 @@ function Header() {
         minutesString = "0"+minutesString
     }
 
+    //time formats
     timeMilitaryFormat=hours.toString()+":"+minutesString
     timeUSFormat=(hours%12).toString()+":"+minutesString+timeSuffix
 
