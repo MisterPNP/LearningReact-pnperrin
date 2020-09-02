@@ -35,13 +35,10 @@ function MyApp() {
         />)
     })
     //map cat contact card data to components
-    const catCardComponents = catData.map(contacts => {
+    const catCardComponents = catData.map(contactInfo => {
         return(<ContactCard
-            key={contacts.id}
-            name={contacts.name}
-            email={contacts.email}
-            imgURL={contacts.imgURL}
-            phone={contacts.phone}
+            //the contact object expected in ContactCard takes in contactInfo (objects in catData.js)
+            contact={contactInfo}
         />)
     })
 
