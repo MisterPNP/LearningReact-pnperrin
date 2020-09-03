@@ -24,44 +24,67 @@ import catData from "../data/catData";
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex
 
-function MyApp() {
+class MyApp extends React.Component {
 
-    //map joke data to components
-    const jokeComponents = jokesData.map(joke => {
-        return (<Joke
-            key={joke.number}
-            number={joke.number}
-            line={joke.line}
-        />)
-    })
-    //map cat contact card data to components
-    const catCardComponents = catData.map(contactInfo => {
-        return(<ContactCard
-            //the contact object expected in ContactCard takes in contactInfo (objects in catData.js)
-            contact={contactInfo}
-        />)
-    })
+    constructor() {
+        super()
+        this.state = {
+            answer: "state"
+        }
+    }
 
-    return(
-        <div>
-            <Header/>
-            <ProfilePicture/>
-            <MainContent/>
+    //maps from data files
+    setJokeComponents() {
+        //map joke data to components
+        const jokeComponents = jokesData.map(joke => {
+            return (<Joke
+                key={joke.number}
+                number={joke.number}
+                line={joke.line}
+            />)
+        })
+        return jokeComponents
+    }
+
+    setCatContacts() {
+        //map cat contact card data to components
+        //the contact object expected in ContactCard takes in contactInfo (objects in catData.js)
+        const catCardComponents = catData.map(contactInfo => {
+            return (<ContactCard
+                contact={contactInfo}
+            />)
+        })
+        return catCardComponents
+    }
+
+    //render what we want to render
+    //logic goes before return
+    render() {
+        const jokeComponents = this.setJokeComponents()
+        const catCardComponents = this.setCatContacts()
+
+        return(
             <div>
-                {catCardComponents}
-                {jokeComponents}
+                <Header/>
+                <ProfilePicture/>
+                <MainContent/>
+                <p>{this.state.answer}</p>
+                <div>
+                    {catCardComponents}
+                    {jokeComponents}
+                </div>
+                <Joke
+                    number="Added without mapping 1"
+                    line="knock knock... Who's there? nope"
+                />
+                <Joke
+                    number="Added without mapping 2"
+                    line="no joke here... i'm too funny"
+                />
+                <Footer/>
             </div>
-            <Joke
-                number="Added without mapping 1"
-                line="knock knock... Who's there? nope"
-            />
-            <Joke
-                number="Added without mapping 2"
-                line="no joke here... i'm too funny"
-            />
-            <Footer/>
-        </div>
-    )
-} //we have an example of how a sub component was made (Footer) and used here
+        )
+    } //we have an example of how a sub component was made (Footer) and used here
+}
 
 export default MyApp
