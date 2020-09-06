@@ -13,6 +13,7 @@ import ContactCard from "./ContactCard";
 import Joke from "./Joke";
 import jokesData from "../data/jokesData";
 import catData from "../data/catData";
+import ButtonCount from "./ButtonCount";
 
 //resources
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -82,6 +83,7 @@ class MyApp extends React.Component {
                     line="no joke here... i'm too funny"
                 />
                 <Footer/>
+                <ButtonCount/>
             </div>
         )
     } //we have an example of how a sub component was made (Footer) and used here
