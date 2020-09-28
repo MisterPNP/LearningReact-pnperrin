@@ -20,10 +20,11 @@ class LoggedIn extends React.Component {
     }
 
     render() {
+        let buttontext = this.state.isLoggedIn ? "LOG OUT" : "LOG IN"
         return(
             <div>
                 <button onClick={this.handleClick}>
-                    Click to Log in or Log out!
+                    {buttontext}
                 </button>
                 <p>You are logged in: {this.state.isLoggedIn.toString()}</p>
                 <LoggedInConditional isLoggedIn={this.state.isLoggedIn}/>

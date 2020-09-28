@@ -16,6 +16,7 @@ import catData from "../data/catData";
 import ButtonCount from "./ButtonCount";
 import UsingConditional from "./UsingConditional";
 import LoggedIn from "./LoggedIn";
+import APIFetch from "./APIFetch";
 
 //resources
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -88,6 +89,7 @@ class MyApp extends React.Component {
                 <ButtonCount/>
                 <UsingConditional/>
                 <LoggedIn/>
+                <APIFetch/>
             </div>
         )
     } //we have an example of how a sub component was made (Footer) and used here
